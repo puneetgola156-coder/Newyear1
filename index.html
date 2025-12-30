@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Year Wish</title>
+
+<style>
+:root {
+  --bg1:#ffe6ef;
+  --bg2:#ffd6e8;
+  --bg3:#fff0f6;
+  --text:#5a2a3c;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: var(--bg1);
+  color: var(--text);
+}
+
+.page {
+  position: absolute;
+  inset: 0;
+  padding: 32px 22px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fade 0.8s ease;
+}
+
+.page.active {
+  display: flex;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px 26px;
+  border: none;
+  border-radius: 30px;
+  background: #ff7aa2;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* FADE */
+@keyframes fade {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+/* CONFETTI */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  from { transform: translateY(-10vh) rotate(0deg); }
+  to { transform: translateY(110vh) rotate(360deg); }
+}
+
+/* HEART LEAVES */
+.heart {
+  position: absolute;
+  top: -10%;
+  width: 14px;
+  height: 14px;
+  background: currentColor;
+  transform: rotate(45deg);
+  opacity: 0.35;
+  pointer-events: none;
+  animation: drift linear infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+.heart::before { top: -7px; left: 0; }
+.heart::after { left: -7px; top: 0; }
+
+@keyframes drift {
+  from {
+    transform: translateX(0) translateY(-10vh) rotate(45deg);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateX(-120vw) translateY(120vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" style="background:var(--bg2)">
+  <h1>✨ Happy New Year ✨</h1>
+  <p>A small New Year wish, just for you</p>
+  <button onclick="nextPage()">Continue</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" style="background:var(--bg1)">
+<p>
+Hi Rishu,<br><br>
+May this year come into your life with more calm, more joy, and the kind of happiness that feels light on your heart.<br><br>
+May you grow, laugh, pray, lift yourself higher, gain strength, and slowly say no to the pain that doesn’t deserve to stay with you.
+</p>
+<button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" style="background:var(--bg3)">
+<p>
+Before I say anything else, I want to make one thing clear.<br><br>
+I’m not doing this to get your attention. I’m doing this because I genuinely want you to be happy — without pressure or regrets.<br><br>
+You don’t have to handle everything alone. I’m here.
+</p>
+<button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" style="background:var(--bg1)">
+<p>
+I know it’s not easy. I know it takes time.<br><br>
+But you are stronger than you think. You’ve faced difficult moments before, and you’ll get through this too — at your own pace.<br><br>
+For now, just give yourself permission to breathe.
+</p>
+<button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" style="background:var(--bg2)">
+<p>
+Please stop being so harsh on yourself.<br><br>
+Life doesn’t work with one-sided blame. You did what you could from your side.<br><br>
+At some point, being kind to yourself becomes more important than holding on to guilt.
+</p>
+<button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" style="background:var(--bg3)">
+<p>
+Life doesn’t end because one person walks away.<br><br>
+Just like at the gym — when a weight hurts too much, you let it go. Not because you’re weak, but because you respect yourself.<br><br>
+You don’t have to carry everything forever.
+</p>
+<button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page" style="background:var(--bg1)">
+<p>
+You are not alone in this storm.<br><br>
+I’m not ahead of you or behind you — I’m beside you, steady and present.<br><br>
+Your future is still bright. Don’t let temporary pain block it.
+</p>
+<button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page" style="background:var(--bg2)">
+<p>
+I trust you.<br><br>
+You don’t need everyone to understand you. Feeling deeply doesn’t make you weak.<br><br>
+You’re allowed to move forward at your own pace.
+</p>
+<button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 9 -->
+<div class="page" style="background:var(--bg3)">
+<p>
+I’m not saying this to impress you.<br><br>
+I just want to see you smile again — the way you used to, naturally and freely.<br><br>
+Those moments will come back, gently and in time.
+</p>
+<button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 10 -->
+<div class="page" style="background:var(--bg1)">
+<p>
+If you ever feel like talking, you can call me.<br><br>
+You won’t disturb me. You never have.<br><br>
+Even if I’m not perfect, I’ll always try to be sincere.
+</p>
+<button onclick="nextPage()">Next</button>
+</div>
+
+<!-- PAGE 11 -->
+<div class="page" style="background:var(--bg2)">
+<h1>🌸 End of Speech 🌸</h1>
+<p>
+Take care of yourself.<br>
+Be gentle with your heart.<br><br>
+Happy New Year
+</p>
+</div>
+
+<script>
+let pages = document.querySelectorAll('.page');
+let index = 0;
+
+function nextPage() {
+  pages[index].classList.remove('active');
+  index++;
+  if (index < pages.length) {
+    pages[index].classList.add('active');
+  }
+}
+
+/* CONFETTI */
+for (let i = 0; i < 30; i++) {
+  let c = document.createElement("div");
+  c.className = "confetti";
+  c.style.left = Math.random() * 100 + "vw";
+  c.style.animationDuration = 3 + Math.random() * 3 + "s";
+  c.style.background = ["#ff7aa2","#ffd166","#ffb4c6"][Math.floor(Math.random()*3)];
+  document.body.appendChild(c);
+}
+
+/* HEART LEAVES */
+setInterval(() => {
+  let h = document.createElement("div");
+  h.className = "heart";
+  h.style.left = Math.random() * 100 + "vw";
+  h.style.animationDuration = 6 + Math.random() * 4 + "s";
+  h.style.color = ["#ff9ebc","#ffc1d6","#ff7aa2"][Math.floor(Math.random()*3)];
+  document.body.appendChild(h);
+  setTimeout(() => h.remove(), 10000);
+}, 500);
+</script>
+
+</body>
+</html>
